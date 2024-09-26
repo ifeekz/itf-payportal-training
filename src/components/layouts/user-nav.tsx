@@ -10,8 +10,15 @@ import {
     DropdownMenuShortcut,
     DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
+import { useNavigate } from "react-router-dom"
 
 export function UserNav() {
+    const navigate = useNavigate();
+
+    function logout() {
+        navigate("/login");
+    }
+
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -48,7 +55,7 @@ export function UserNav() {
                     </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem className='cursor-pointer' onClick={() => {/* */ }}>
+                <DropdownMenuItem className='cursor-pointer' onClick={() => logout()}>
                     Log out
                     <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
                 </DropdownMenuItem>
