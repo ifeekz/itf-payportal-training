@@ -17,7 +17,6 @@ export async function userLogin(url: string, { arg }: { arg: any }) {
   }
 }
 
-/* tslint:disable:no-unused-variable */
 export async function userLogin2(url: string, { arg }: { arg: any }) {
   console.log(url);
   if (arg.email === "test@email.com" && arg.password === "12345678") {
