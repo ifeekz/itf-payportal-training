@@ -17,6 +17,7 @@ export async function userLogin(url: string, { arg }: { arg: any }) {
   }
 };
 
+// eslint-disable-next-line
 export async function userLogin2(url: string, { arg }: { arg: any }) {
     if (arg.email === 'test@email.com' && arg.password === '12345678') {
         return {
